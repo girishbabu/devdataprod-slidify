@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Shiny app pitch as part of Coursera's Developing Data Products program</title>
+	<meta name="description" content="Shiny app pitch as part of Coursera's Developing Data Products program">
+	<meta name="author" content="Girish Babu">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />    
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Slide 1</h3>
+  <p>Idea: An aggreagtor for showing your personal web pages in an Iframe on the same page.</p>
+
+<p>Solution: Simple reactive page which loads a link corresponding to the radio button selected</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Slide 2</h3>
+  <p>Needs: </p>
+
+<ol>
+<li>A Shiny account at <a href="http://www.shinyapps.io">http://www.shinyapps.io</a></li>
+<li>RStudio to create the code &amp; publish to Shiny</li>
+</ol>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Slide 3</h3>
+  <p>Code: Hosted at <a href="http://github.com/girishbabu/devdataprod-project">http://github.com/girishbabu/devdataprod-project</a> </p>
+
+<p>UI Component pseudo-code:</p>
+
+<pre><code>mainPanel(
+  headerPanel(...),
+  titlePanel(...),
+  radioButtons(...),
+  htmlOutput(&#39;page&#39;)
+)
+</code></pre>
+
+<p>Server component pseudo-code:</p>
+
+<pre><code>shinyServer(
+  function(input, output) {  
+    output$page &lt;- renderUI({tags$iframe(...)})
+  }
+)
+</code></pre>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Slide 4</h3>
+  <p>Final Application:</p>
+
+<p>Available at <a href="http://girishbabu.shinyapps.io/devdataprod-project">http://girishbabu.shinyapps.io/devdataprod-project</a></p>
+
+<p>Why it is useful - People do not have to host their page and link all publicly relevant links; just extend the radio button options &amp; they can publish as many links as necessary.</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Slide 5</h3>
+  <p>Conclusion</p>
+
+<p>This app was developed using RStudio &amp; hosted on Shiny. Code is hosted on github.</p>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
